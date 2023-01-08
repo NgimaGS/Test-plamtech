@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
+
+    <!-- Vendor CSS Files -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="css/index.css" rel="stylesheet" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ======= Header ======= -->
+    <header
+      id="header"
+      class="header fixed-top d-flex align-items-center"
+    ></header>
+
+    <main id="main" class="main container">
+      <div class="pagetitle">
+        <h1>Users</h1>
+      </div>
+
+      <section class="section mt-1">
+        <div class="row">
+          <div class="col-12">
+            <div class="col-12 mt-5">
+              <div class="table-responsive">
+                <table class="table table-hover table-striped" id="user-table">
+                  <thead>
+                    <tr>
+                      <th scope="col">S.No</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Contact Details</th>
+                      <th scope="col">Address</th>
+                      <th scope="col">Role</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="modal fade"
+          id="editModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="editModalLabel"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title" id="editModalLabel">Edit User</h4>
+              </div>
+              <div class="modal-body">
+                <form class="row g-2" novalidate id="edituser-form">
+                  <div class="col-6">
+                    <label for="yourName" class="form-label">Your Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      class="form-control"
+                      id="yourName"
+                      required
+                    />
+                    <div class="invalid-feedback">Please, enter your name!</div>
+                  </div>
+
+                  <div class="col-6">
+                    <label for="yourEmail" class="form-label">Your Email</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control"
+                      id="yourEmail"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid Email adddress!
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <label for="yourAddress" class="form-label"
+                      >Your Address</label
+                    >
+                    <input
+                      name="address"
+                      class="form-control"
+                      id="yourAddress"
+                      required
+                    />
+                  </div>
+                  <div class="col-6">
+                    <label for="yourContact" class="form-label"
+                      >Contact Details</label
+                    >
+                    <input
+                      name="contact_no"
+                      class="form-control"
+                      id="yourContact"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid Contact!
+                    </div>
+                  </div>
+                  <div class="col-12 mt-2">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        name="isAdmin"
+                        id="admin-cb"
+                      />
+                      <label class="form-check-label" for="admin-cb"
+                        >Set as Admin</label
+                      >
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button class="btn btn-primary" type="submit">
+                      Save changes
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="lib\jquery\jquery-3.6.3.min.js"></script>
+    <script src="lib\bootstrap\js\bootstrap.min.js"></script>
+
+    <script src="js\utils\cookiehelper.js"></script>
+    <script src="js\utils\validate-token.js"></script>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js\component\navbar.js"></script>
+    <script src="js\users\index.js"></script>
+  </body>
+</html>
